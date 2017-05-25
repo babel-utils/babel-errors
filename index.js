@@ -22,7 +22,7 @@ function captureStackTrace(err, fn) {
 function createErrorWithLoc(
   message /*: string */,
   line /*: number */,
-  column /*: number */,
+  column /*: number */
 ) /*: Error */ {
   let err /*: any */ = new SyntaxError(message);
   err.loc = {line, column};
@@ -31,7 +31,7 @@ function createErrorWithLoc(
 
 function wrapErrorWithCodeFrame(
   file /*: File */,
-  error /*: Error */,
+  error /*: Error */
 ) /*: Error */ {
   try {
     file.wrap(file.code, () => {
@@ -47,7 +47,7 @@ function wrapErrorWithCodeFrame(
 
 function buildCodeFrameError(
   path /*: Path */,
-  message /*: string */,
+  message /*: string */
 ) /*: Error */ {
   let file = path.hub.file;
   let error;
