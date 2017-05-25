@@ -1,6 +1,6 @@
 {
   "name": "babel-errors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Nicer error messages for Babel",
   "main": "index.js",
   "author": "James Kyle <me@thejameskyle.com>",
