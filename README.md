@@ -31,3 +31,7 @@ message.
 
 Use this instead of `path.buildCodeFrameError` when you aren't running inside a
 Babel plugin.
+
+### `toErrorStack(error)`
+
+Creates string with error name, message, stack/code frame.

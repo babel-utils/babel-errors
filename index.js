@@ -65,8 +65,19 @@ function buildCodeFrameError(
   return error;
 }
 
+function toErrorStack(err /*: Error */) {
+  if (err._babel && err instanceof SyntaxError) {
+    let stack = `${err.name}: ${err.message}`;
+    if (err.codeFrame) stack += '\n' + String(err.codeFrame);
+    return stack;
+  } else {
+    return err.stack;
+  }
+}
+
 module.exports = {
   createErrorWithLoc,
   wrapErrorWithCodeFrame,
   buildCodeFrameError,
+  toErrorStack,
 };
